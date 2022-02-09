@@ -1,0 +1,5 @@
+coverage
+TestResult.xml
+*.Test.xml
+*.Test.trx
+*.Test-coverage.xml

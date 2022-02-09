@@ -1,0 +1,9 @@
+.vs
+packages
+TestResult.xml
+TestResults
+*.patched.sln
+bin
+obj
+*.csproj.user
+

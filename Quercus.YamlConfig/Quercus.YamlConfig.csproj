@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+
+    <PackageProjectUrl>https://github.com/QuercusB/YamlConfig</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/QuercusB/YamlConfig</RepositoryUrl>
+    <Description>Quercus.YamlConfig is a .NET library for using YAML files as application confirguration.</Description>
+    <Copyright>Copyright (c)Quercus</Copyright>
+    <Configurations>Debug;Release</Configurations>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+
+    <LangVersion>8.0</LangVersion>
+    <Nullable>enable</Nullable>
+
+    <NetStandard>false</NetStandard>
+    <RealTargetFramework>$(TargetFramework)</RealTargetFramework>
+    <NetStandard>true</NetStandard>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="YamlDotNet" Version="9.1.4" PrivateAssets="all" />
+  </ItemGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DefineConstants>$(DefineConstants);RELEASE;TRACE</DefineConstants>
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+</Project>

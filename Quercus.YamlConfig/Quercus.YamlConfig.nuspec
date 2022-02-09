@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package>
+    <metadata minClientVersion="2.8">
+        <id>Quercus.YamlConfig</id>
+        <version>0.0.1</version>
+        <authors>Quercus</authors>
+        <description>Small package for using YAML-files as application configuration</description>
+        <summary>This package contains the YAML parser and serializer.</summary>
+        <language>en-US</language>
+        <projectUrl>https://github.com/QuercusB/Quercus.YamlConfig</projectUrl>
+        <repository type="git" url="https://github.com/QuercusB/Quercus.YamlConfig" />
+        <tags>yaml configuration library</tags>
+        <dependencies>
+            <group targetFramework=".NETStandard2.0" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="bin/Release/netstandard2.0/Quercus.YamlConfig.dll" target="lib/netstandard2.0" />
+    </files>
+</package>
