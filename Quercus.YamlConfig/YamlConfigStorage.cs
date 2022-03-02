@@ -42,6 +42,13 @@ namespace Quercus.YamlConfig
                 .Build();
         }
 
+        internal YamlConfigStorage(SerializerBuilder serializerBuilder, DeserializerBuilder deserializerBuilder)
+        {
+            var lateBoundConverter = new YamlLateBoundConfigConverter(this);
+            serializer = serializerBuilder.WithTypeConverter(lateBoundConverter).BuildValueSerializer();
+            deserializer = deserializerBuilder.WithTypeConverter(lateBoundConverter).Build();
+        }
+
         internal IValueSerializer Serializer => serializer;
         internal IDeserializer Deserializer => deserializer;
 
